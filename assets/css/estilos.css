@@ -89,6 +89,7 @@ body {
 
 .gorro {
     width: 90%;
+    margin-left: 10px;
 }
 
 .ubicacion {
@@ -128,7 +129,7 @@ body {
 }
 
 .palmera {
-    width: 500px;
+    width: 51%;
     position: fixed;
     bottom: 0;
     right: 0;
