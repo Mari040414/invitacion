@@ -1328,39 +1328,56 @@
         $(document).ready(function() {
 		var swipeArea = document.getElementById('contenedor');
 		var hammer = new Hammer(swipeArea);
+        let isGorroMove = false;
 	
 		hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 	
 		hammer.on('swipeup', function() {
             $("#cancion")[0].play();
-            $( ".mover-gorro" ).addClass("rotar-gorro");
-            setTimeout(() => {
-                $( ".mover-gorro" ).removeClass("rotar-gorro");
-            }, 2000);
+            if (!isGorroMove) {
+                isGorroMove = true;
+                $( ".mover-gorro" ).addClass("rotar-gorro");
+                setTimeout(() => {
+                    $( ".mover-gorro" ).removeClass("rotar-gorro");
+                    isGorroMove = false;
+                }, 1500);
+            }
 		});
 	
 		hammer.on('swipedown', function() {
             $("#cancion")[0].play();
-            $( ".mover-gorro" ).addClass("rotar-gorro");
-            setTimeout(() => {
-                $( ".mover-gorro" ).removeClass("rotar-gorro");
-            }, 2000);
+            if (!isGorroMove) {
+                isGorroMove = true;
+                $( ".mover-gorro" ).addClass("rotar-gorro");
+                setTimeout(() => {
+                    $( ".mover-gorro" ).removeClass("rotar-gorro");
+                    isGorroMove = false;
+                }, 1500);
+            }
 		});
 	
 		hammer.on('swipeleft', function() {
             $("#cancion")[0].play();
-            $( ".mover-gorro" ).addClass("rotar-gorro");
-            setTimeout(() => {
-                $( ".mover-gorro" ).removeClass("rotar-gorro");
-            }, 2000);
+            if (!isGorroMove) {
+                isGorroMove = true;
+                $( ".mover-gorro" ).addClass("rotar-gorro");
+                setTimeout(() => {
+                    $( ".mover-gorro" ).removeClass("rotar-gorro");
+                    isGorroMove = false;
+                }, 1500);
+            }
 		});
 	
 		hammer.on('swiperight', function() {
             $("#cancion")[0].play();
-            $( ".mover-gorro" ).addClass("rotar-gorro");
-            setTimeout(() => {
-                $( ".mover-gorro" ).removeClass("rotar-gorro");
-            }, 2000);
+            if (!isGorroMove) {
+                isGorroMove = true;
+                $( ".mover-gorro" ).addClass("rotar-gorro");
+                setTimeout(() => {
+                    $( ".mover-gorro" ).removeClass("rotar-gorro");
+                    isGorroMove = false;
+                }, 1500);
+            }
 		});
 	});
 

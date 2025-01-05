@@ -48,7 +48,7 @@ body {
     text-align: center;
     position: absolute;
     z-index: 10;
-    padding: 10px;
+    padding: 34px 10px;
 }
 
 .nombre {
@@ -120,7 +120,7 @@ body {
 .dino {
     width: 430px;
     position: fixed;
-    left: 0;
+    left: -10px;
     bottom: 23px;
     z-index: 10;
 }
@@ -135,7 +135,7 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
-    transform: translate(44px, 30px);
+    transform: translate(80px, 30px);
 }
 
 .rotar-hoja {
