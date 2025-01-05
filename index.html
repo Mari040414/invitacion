@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#8FCDBF">
     <link rel="icon" type="image/x-icon" href="assets/img/dino-ico.png">
     <title>Baby shower</title>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body >
@@ -1328,20 +1328,32 @@
             $("#cancion")[0].play();
         });
 
-        $(document).on("pagecreate", "#contenedor", function() {
-			$(document).on("swipe", function() {
-                alert("¡Has deslizado el dedo!");
-                $("#cancion")[0].play();
-			});
-            $(document).on("swipeup", function() { 
-                alert("¡Has deslizado el dedo hacia arriba!"); 
-                $("#cancion")[0].play();
-            }); 
-            $(document).on("swipedown", function() { 
-                alert("¡Has deslizado el dedo hacia abajo!"); 
-                $("#cancion")[0].play();
-            });
+        $(document).ready(function() {
+		var swipeArea = document.getElementById('contenedor');
+		var hammer = new Hammer(swipeArea);
+	
+		hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+	
+		hammer.on('swipeup', function() {
+            $("#cancion")[0].play();
+			alert("¡Has deslizado el dedo hacia arriba!");
 		});
+	
+		hammer.on('swipedown', function() {
+            $("#cancion")[0].play();
+			alert("¡Has deslizado el dedo hacia abajo!");
+		});
+	
+		hammer.on('swipeleft', function() {
+            $("#cancion")[0].play();
+			alert("¡Has deslizado el dedo hacia la izquierda!");
+		});
+	
+		hammer.on('swiperight', function() {
+            $("#cancion")[0].play();
+			alert("¡Has deslizado el dedo hacia la derecha!");
+		});
+	});
 
     </script>
 </body>
