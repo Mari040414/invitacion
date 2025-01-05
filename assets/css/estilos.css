@@ -154,7 +154,7 @@ body {
 
 .rotar-gorro {
     transform-origin: center;
-    animation: rotate-gorro 1s 4s forwards;
+    animation: rotate-gorro 1s 1s forwards;
     transform-box: fill-box;
 }
 
