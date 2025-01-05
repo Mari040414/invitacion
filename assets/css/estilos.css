@@ -14,8 +14,18 @@
 }
 
 @font-face {
+    font-family: "Cocogoose-Light";
+    src: url("../fonts/Cocogoose-Pro-Thin-trial.ttf") 
+}
+
+@font-face {
     font-family: "GeosansLight";
     src: url("../fonts/GeosansLight.ttf") 
+}
+
+@font-face {
+    font-family: "GeosansBold";
+    src: url("../fonts/Geob____.ttf") 
 }
 
 body {
@@ -78,7 +88,7 @@ body {
 
 .frase {
     color: #1D1D1B;
-    font-family: "Cocogoose";
+    font-family: "Cocogoose-Light";
     font-size: 12px;
     margin-top: 16px;
     font-weight: 100;
