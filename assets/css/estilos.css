@@ -138,7 +138,23 @@ body {
 
 .rotar-hoja {
     transform-origin: center;
-    animation: rotate 2s 3s infinite;
+    animation: rotate 2s 2s infinite;
+    transform-box: fill-box;
+}
+.rotar-palmera {
+    transform-origin: center;
+    animation: rotate-palmera 2s 2s infinite;
+    transform-box: fill-box;
+}
+.rotar-dino {
+    transform-origin: center;
+    animation: rotate-dino 2s 2s infinite;
+    transform-box: fill-box;
+}
+
+.rotar-gorro {
+    transform-origin: center;
+    animation: rotate-gorro 1s 4s forwards;
     transform-box: fill-box;
 }
 
@@ -151,5 +167,38 @@ body {
     }
     100%{
         transform: rotate(-20deg);
+    }
+}
+
+@keyframes rotate-palmera {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(3deg);
+    }
+    100%{
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes rotate-dino {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(6deg);
+    }
+    100%{
+        transform: rotate(-6deg);
+    }
+}
+
+@keyframes rotate-gorro {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
