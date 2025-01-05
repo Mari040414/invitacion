@@ -1326,7 +1326,7 @@
         $("#contenedor").click(function() {
             $("#cancion")[0].play();
         });
-        $("#contenedor").scroll(function(){
+        $(document).on("swipe", function() { 
             $("#cancion")[0].play();
         });
     </script>
