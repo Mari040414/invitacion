@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#8FCDBF">
     <link rel="icon" type="image/x-icon" href="assets/img/dino-ico.png">
     <title>Baby shower</title>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
@@ -19,7 +19,7 @@
         id="cancion">
     </audio>
 
-    <div class="container" id="contenedor">
+    <div class="container" data-role="page" id="contenedor">
         
         <div>
             
@@ -1327,12 +1327,22 @@
         $("#contenedor").click(function() {
             $("#cancion")[0].play();
         });
-        $(document).on("swipe", function() { 
-            $("#cancion")[0].play();
-        });
-        $('body').bind('touchmove', function(e) { 
-            $("#cancion")[0].play();
-        });
+
+        $(document).on("pagecreate", "#contenedor", function() {
+			$(document).on("swipe", function() {
+                alert("¡Has deslizado el dedo!");
+                $("#cancion")[0].play();
+			});
+            $(document).on("swipeup", function() { 
+                alert("¡Has deslizado el dedo hacia arriba!"); 
+                $("#cancion")[0].play();
+            }); 
+            $(document).on("swipedown", function() { 
+                alert("¡Has deslizado el dedo hacia abajo!"); 
+                $("#cancion")[0].play();
+            });
+		});
+
     </script>
 </body>
 </html>
