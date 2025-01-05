@@ -132,7 +132,7 @@ body {
     position: fixed;
     left: -10px;
     bottom: 23px;
-    z-index: 10;
+    z-index: 1;
 }
 
 .div__palmera {
