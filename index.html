@@ -521,7 +521,7 @@
 
         <div class="div__cont-text">
             <div class="div__text">
-                <p class="nombre">Uriel....</p>
+                <p class="nombre">Uriel</p>
                 <p class="baby">BABY SHOWER</p>
                 <p class="fecha">Sábado <b>01</b> Febrero <b>15:30 hrs</b></p>
                 <p class="frase">¡Sin errores ni bugs, el baby Uriel está en camino! Celebra con nosotros su llegada, el código más hermoso que hemos creado.</p>
@@ -1161,7 +1161,7 @@
                             </g>
                           </g>
                         </g>
-                        <g class="rotar-gorro">
+                        <g class="mover-gorro">
                           <g>
                             <path class="cls-dino-38" d="M255.34,74.43l34.55-18.43.18,40.49s-25.91-4.29-34.73-22.05Z"/>
                             <g class="cls-dino-3">
@@ -1336,22 +1336,22 @@
 	
 		hammer.on('swipeup', function() {
             $("#cancion")[0].play();
-			alert("¡Has deslizado el dedo hacia arriba!");
+            $( ".mover-gorro" ).addClass("rotar-gorro");
 		});
 	
 		hammer.on('swipedown', function() {
             $("#cancion")[0].play();
-			alert("¡Has deslizado el dedo hacia abajo!");
+            $( ".mover-gorro" ).addClass("rotar-gorro");
 		});
 	
 		hammer.on('swipeleft', function() {
             $("#cancion")[0].play();
-			alert("¡Has deslizado el dedo hacia la izquierda!");
+            $( ".mover-gorro" ).addClass("rotar-gorro");
 		});
 	
 		hammer.on('swiperight', function() {
             $("#cancion")[0].play();
-			alert("¡Has deslizado el dedo hacia la derecha!");
+            $( ".mover-gorro" ).addClass("rotar-gorro");
 		});
 	});
 
