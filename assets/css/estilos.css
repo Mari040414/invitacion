@@ -202,3 +202,9 @@ body {
         transform: rotate(360deg);
     }
 }
+
+@media screen and (orientation: landscape) {
+    body {
+        display: none;
+    }
+}
