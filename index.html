@@ -1324,9 +1324,6 @@
     </div>
 
     <script>
-        $("#contenedor").click(function() {
-            $("#cancion")[0].play();
-        });
 
         $(document).ready(function() {
 		var swipeArea = document.getElementById('contenedor');
@@ -1337,21 +1334,33 @@
 		hammer.on('swipeup', function() {
             $("#cancion")[0].play();
             $( ".mover-gorro" ).addClass("rotar-gorro");
+            setTimeout(() => {
+                $( ".mover-gorro" ).removeClass("rotar-gorro");
+            }, 2000);
 		});
 	
 		hammer.on('swipedown', function() {
             $("#cancion")[0].play();
             $( ".mover-gorro" ).addClass("rotar-gorro");
+            setTimeout(() => {
+                $( ".mover-gorro" ).removeClass("rotar-gorro");
+            }, 2000);
 		});
 	
 		hammer.on('swipeleft', function() {
             $("#cancion")[0].play();
             $( ".mover-gorro" ).addClass("rotar-gorro");
+            setTimeout(() => {
+                $( ".mover-gorro" ).removeClass("rotar-gorro");
+            }, 2000);
 		});
 	
 		hammer.on('swiperight', function() {
             $("#cancion")[0].play();
             $( ".mover-gorro" ).addClass("rotar-gorro");
+            setTimeout(() => {
+                $( ".mover-gorro" ).removeClass("rotar-gorro");
+            }, 2000);
 		});
 	});
 
